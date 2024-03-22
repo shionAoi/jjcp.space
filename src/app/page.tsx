@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 
-const imageLoader = ({ src }) => {
+const imageLoader = ({ src }: {src: string}) => {
     return `https://res.cloudinary.com/dcmo1cogr/image/upload/${src}`
 }
 
