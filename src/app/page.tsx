@@ -1,4 +1,9 @@
+'use client'
 import Image from "next/image";
+
+const imageLoader = ({ src }) => {
+    return `https://res.cloudinary.com/dcmo1cogr/image/upload/${src}`
+}
 
 export default function Home() {
     return (
@@ -11,7 +16,8 @@ export default function Home() {
 
             <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center">
                 <Image
-                    src="/logo.png"
+                    loader={imageLoader}
+                    src="v1711143691/gdrx5o0szcylojb0mmwl.png"
                     alt="Logo"
                     sizes="100vh"
                     height={0}
